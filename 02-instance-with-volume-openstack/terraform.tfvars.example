@@ -1,0 +1,26 @@
+# Instance configuration
+instance_name     = "terraform-volume-instance"
+image_id          = "24d82fe7-9ebf-4fc1-82e6-015a9a8f1c0c"  # Replace with your image ID
+flavor_name       = "m1.small"
+key_pair          = "my-key-pair"  # Replace with your key pair name
+security_groups   = ["default"]
+network_name      = "private-network"  # Replace with your network name
+availability_zone = "nova"
+
+# Volume configuration
+volume_name        = "terraform-data-volume"
+volume_size        = 10  # Size in GB
+volume_type        = "ceph"  # Replace with your available volume type
+volume_mount_point = "/data"
+volume_device      = "/dev/vdb"
+volume_filesystem  = "ext4"
+
+# Network configuration
+floating_ip_pool   = "external"  # Replace with your external network name
+
+# Optional metadata
+metadata = {
+  environment = "development"
+  project     = "terraform-examples"
+  owner       = "operations-team"
+}

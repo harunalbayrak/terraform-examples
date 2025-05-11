@@ -1,0 +1,23 @@
+// Example variables for deploying an instance with multiple networks
+// Rename this file to terraform.tfvars and update the values below.
+
+// Mandatory: Specify your SSH key pair name
+key_pair_name = "my-ssh-key"
+
+// Recommended: Verify and update these if needed
+instance_name = "my-multi-net-vm"
+image_name    = "Ubuntu 22.04" // Or another image like "cirros", "CentOS 7"
+flavor_name   = "m1.small"     // Check available flavors in your OpenStack
+
+// Mandatory: Specify at least two existing network names in your OpenStack project
+network_names = ["my-internal-net-1", "my-internal-net-2"]
+
+// Optional: Specify security groups
+// security_groups = ["default", "web-access"]
+
+// Optional: Specify availability zone
+// availability_zone = "az1"
+
+// Optional: Assign a floating IP to the first network interface
+assign_floating_ip = true
+floating_ip_pool   = "public" // Or your external network name for floating IPs

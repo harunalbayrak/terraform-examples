@@ -1,0 +1,26 @@
+// Example variables for deploying instances with a server group
+// Rename this file to terraform.tfvars and update the values below.
+
+// --- Mandatory: Specify these for your OpenStack environment ---
+key_pair_name = "my-ssh-key"
+network_name  = "private-network" // Network where instances will reside
+
+// --- Instance Configuration ---
+// instance_basename = "ha-app-node"
+// instance_count    = 3 // For anti-affinity, ensure you have enough compute hosts
+// image_name        = "Ubuntu 22.04"
+// flavor_name       = "m1.medium"
+// availability_zone = "nova"
+
+// --- Security Group ---
+// security_group_name = "app-nodes-sg"
+// ssh_allowed_cidr    = "YOUR_HOME_IP/32" // Restrict SSH access
+
+// --- Server Group Configuration ---
+// server_group_name   = "high-availability-group"
+server_group_policy = "anti-affinity" // Common choices: "anti-affinity", "affinity"
+                                      // Other options: "soft-anti-affinity", "soft-affinity"
+
+// --- Optional Floating IP for the first instance ---
+assign_floating_ip_to_first_instance = true
+floating_ip_pool                     = "public" // Or your external network name for floating IPs

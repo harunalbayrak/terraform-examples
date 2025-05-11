@@ -1,0 +1,28 @@
+// Example variables for deploying instances with a load balancer
+// Rename this file to terraform.tfvars and update the values below.
+
+// --- Mandatory: Specify these for your OpenStack environment ---
+key_pair_name = "my-ssh-key"
+network_name  = "private-network" // Network where instances and LB VIP will reside
+subnet_name   = "private-subnet"  // Subnet within the above network
+
+// --- Instance Configuration ---
+// instance_basename = "webapp-server"
+// instance_count    = 2
+// image_name        = "Ubuntu 22.04" // Or another image like "cirros", "CentOS 8 Stream"
+// flavor_name       = "m1.small"     // Check available flavors
+// availability_zone = "nova"
+
+// --- Security Group for Instances ---
+// instance_sg_name   = "webapp-sg"
+// ssh_allowed_cidr   = "YOUR_HOME_IP/32" // Restrict SSH access
+// http_allowed_cidr  = "0.0.0.0/0"       // Allow HTTP from anywhere (LB will also need access)
+
+// --- Load Balancer Configuration ---
+// lb_name               = "production-web-lb"
+// lb_listener_port      = 80
+// lb_pool_member_port   = 80 // Port your web server on instances listens on (e.g., 80 for Apache)
+
+// --- Floating IP for Load Balancer ---
+assign_lb_floating_ip = true
+floating_ip_pool      = "public" // Or your external network name for floating IPs

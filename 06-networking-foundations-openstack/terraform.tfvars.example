@@ -1,0 +1,27 @@
+// Example variables for creating networking foundations and an instance
+// Rename this file to terraform.tfvars and update the values below.
+
+// --- Mandatory: Specify these for your OpenStack environment ---
+key_pair_name         = "my-ssh-key"
+external_network_name = "public" // Or "ext-net", or whatever your external network is named
+
+// --- Network Configuration (Optional: Defaults are usually fine to start) ---
+// prefix               = "prod-app"
+// private_network_name = "app-internal-net"
+// private_network_cidr = "192.168.100.0/24"
+// private_subnet_name  = "app-internal-subnet"
+// dns_nameservers      = ["1.1.1.1", "1.0.0.1"] // Cloudflare DNS
+// router_name          = "app-router"
+
+// --- Security Group (Optional: Default allows SSH and Ping from anywhere) ---
+// secgroup_name        = "app-base-sg"
+// ssh_allowed_cidr     = "YOUR_HOME_IP/32" // Recommended: Restrict SSH access
+
+// --- Instance Configuration (Optional: Update as needed) ---
+// instance_name        = "webserver-01"
+// image_name           = "Ubuntu 22.04"
+// flavor_name          = "m1.medium"
+// availability_zone    = "az1" // If you use specific AZs
+
+// --- Floating IP for Instance (Optional) ---
+// assign_floating_ip   = true

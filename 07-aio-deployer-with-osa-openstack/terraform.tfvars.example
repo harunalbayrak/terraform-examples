@@ -1,0 +1,37 @@
+# --- Required Variables ---
+# You MUST uncomment and set these variables.
+# aio_key_pair_name         = "your-openstack-ssh-key-name"
+# aio_network_name          = "your-internal-openstack-network-name" # e.g., "private_net"
+# aio_external_network_name = "your-external-openstack-network-name" # e.g., "public_net", "ext-net"
+
+# --- Optional Overrides for AIO Instance ---
+# aio_instance_name     = "my-custom-osa-aio"
+# aio_image_name        = "Ubuntu 22.04 LTS" # Ensure this image exists in your OpenStack
+# aio_flavor_name       = "m1.xlarge"        # Choose a flavor with sufficient resources (e.g., 8vCPU, 16GB RAM, 100GB+ disk)
+# aio_root_disk_size_gb = 120
+# aio_default_user      = "ubuntu"           # Change if your image uses a different default user (e.g., 'centos', 'cloud-user')
+
+# WARNING: Setting a password here is a security risk. Prefer SSH key-based authentication.
+# Use only for temporary testing if absolutely necessary.
+# aio_instance_password = "AVeryStrongAndComplexPassword123!"
+
+# aio_tags = {
+#   environment = "testing"
+#   project     = "osa-aio-lab"
+#   owner       = "your-name@example.com"
+# }
+
+# aio_security_group_ports = [22, 80, 443, 5000, 6080] # Customize open ports if needed
+
+# --- OpenStack-Ansible Specific Variables ---
+# osa_branch                          = "stable/caracal" # Check OpenStack-Ansible docs for the latest stable release
+# osa_environment_layout              = "aio"
+# osa_scenario                        = "base" # For more features, explore scenarios like "network_l3" or "storage_lvm"
+# osa_infra_provider                  = "lxc"
+
+# osa_enable_heat                     = true
+# osa_enable_cinder                   = true  # For block storage
+# osa_enable_swift                    = false # Swift AIO can be complex; enable with caution and ensure prerequisites
+# osa_enable_horizon                  = true
+
+# osa_bootstrap_ansible_pip_packages = ["python-openstackclient", "ansible-lint"]

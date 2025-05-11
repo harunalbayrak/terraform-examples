@@ -14,6 +14,9 @@ This repository contains modular, reusable Terraform code examples for OpenStack
 | [02-instance-with-volume-openstack](./02-instance-with-volume-openstack/) | Instance with attached persistent volume |
 | [03-instance-with-multiple-networks-openstack](./03-instance-with-multiple-networks-openstack/) | Instance connected to multiple networks |
 | [04-instance-with-loadbalancer-openstack](./04-instance-with-loadbalancer-openstack/) | Multiple instances behind a load balancer |
+| [05-instance-with-server-group-openstack](./05-instance-with-server-group-openstack/) | Instance with server group |
+| [06-networking-foundations-openstack](./06-networking-foundations-openstack/) | Networking foundations for Openstack |
+| [07-aio-deployer-with-osa-openstack](./07-aio-deployer-with-osa-openstack/) | Openstack-Ansible AIO Deployer |
 
 ## Getting Started
 
